@@ -7,8 +7,8 @@ import StringIO
 import os
 import sys
 
-gmailUser = 'supersecrettest@gmail.com'
-gmailPass = 'pass123$'
+from settings import *
+
 dayTemplate = '/Users/shadowbrain/Workspace/dayTemplate.txt'
 nightTemplate = '/Users/shadowbrain/Workspace/nightTemplate.txt'
 
@@ -83,8 +83,6 @@ def processInbox(user=gmailUser, password=gmailPass, isDay=True):
 def parseLead(destAddr, crm, templateFile):
 	input = open(templateFile)
 	template = ""
-	salesDict = {"mc.wc.lf.01@gmail.com":"Ralf Berthiez","mc.wc.lf.07@gmail.com":"Jonathan	Branco","mc.wc.lf.02@gmail.com":"Joey Darley","mc.wc.lf.06@gmail.com":"John Dorazio","mc.wc.lf.04@gmail.com":"Bob Evers","mc.wc.lf.08@gmail.com":"Ken Johnson","mc.wc.lf.05@gmail.com":"Michael Maloney","mc.wc.lf.03@gmail.com":"Richard Springman","mc.wc.lf.09@gmail.com":"Kurt Rodgers","mstoehrer@moorech.dealerspace.com":"Mark Stoehrer"}
-	salesMailDict =	{"mc.wc.lf.01@gmail.com":"Ralf.Berthiez@moorecadillac.com","mc.wc.lf.07@gmail.com":"Jonathan.Branco@moorecadillac.com","mc.wc.lf.02@gmail.com":"Joey.Darley@moorecadillac.com","mc.wc.lf.06@gmail.com":"John.Dorazio@moorecadillac.com","mc.wc.lf.04@gmail.com":"Bob.Evers@moorecadillac.com","mc.wc.lf.08@gmail.com":"Ken.Johnson@moorecadillac.com","mc.wc.lf.05@gmail.com":"Michael.Maloney@moorecadillac.com","mc.wc.lf.03@gmail.com":"Richard.Springman@moorecadillac.com","mc.wc.lf.09@gmail.com":"Kurt.Rodgers@moorecadillac.com","mstoehrer@moorech.dealerspace.com":"Mark.Stoehrer@moorecadillac.com"}
 	for s in input.xreadlines():
 		template += s
 #		template += "\n"
