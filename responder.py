@@ -7,7 +7,7 @@ import StringIO
 import os
 import sys
 
-from settings import *
+from bgmsettings import *
 
 dayTemplate = '/Users/shadowbrain/Workspace/dayTemplate.txt'
 nightTemplate = '/Users/shadowbrain/Workspace/nightTemplate.txt'
