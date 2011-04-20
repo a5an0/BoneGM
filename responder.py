@@ -58,7 +58,7 @@ def processInbox(user=gmailUser, password=gmailPass, isDay=True):
 			processed = matchObject.group(0)
 			fromLine = re.search('From:.+To', raw).group(0)
 			fromLine=re.sub('=20',' ',fromLine)
-			fromLine=re.sub('\|To?','',fromLine)
+			fromLine=re.sub('\|(To)?','',fromLine)
 			print fromLine 
 			if re.search('<', fromLine):
 				toAddr = fromLine.split('<')[1].split('>')[0]
